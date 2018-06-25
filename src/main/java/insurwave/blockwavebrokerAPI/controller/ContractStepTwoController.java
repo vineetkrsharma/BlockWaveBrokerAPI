@@ -37,7 +37,7 @@ public class ContractStepTwoController {
 	@ResponseStatus(HttpStatus.OK)
 	@ApiOperation("Persists data from step 2 of draft contract creation to the off-ledger")
 	public boolean saveSection2ContractDetails(@RequestBody ContractStepTwo[] contractSections) {
-		_logger.trace("Entering...");
+		_logger.trace("Entering.....");
 		List<Contract_Section> contract_Sections = contractStepTwoProcessor.process(contractSections);
 		_logger.trace("Exiting...");
 		return contract_Sections.isEmpty() ? false : true;
